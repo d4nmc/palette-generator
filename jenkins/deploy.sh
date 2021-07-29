@@ -19,22 +19,6 @@ source venv/bin/activate
 # Install pip requirements
 pip3 install -r requirements.txt
 
-# Create service script
-cat << EOF > /opt/todo-list/todo-list.service
-[Unit]
-Description=Todo List
-[Service]
-User=jenkins
-WorkingDirectory=/opt/todo-list
-Environment="DATABASE_URI=$DATABASE_URI"
-Environment="SECRET_KEY=$SECRET_KEY"
-ExecStart=/bin/bash ${install_dir}/jenkins/run.sh
-[Install]
-WantedBy=multi-user.target
-EOF
-
-# Install the app service script
-sudo cp /opt/todo-list/todo-list.service /etc/systemd/system/
 
 # Start the systemd service
 sudo systemctl daemon-reload
