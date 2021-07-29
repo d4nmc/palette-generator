@@ -1,0 +1,26 @@
+
+// Python, pip and venv must all be installed:
+
+sudo apt-get update
+sudo apt-get install -y python3 python3-pip python3-venv
+
+// Create and activate the virtual environment:
+
+python3 -m venv venv
+source venv/bin/activate
+
+// Install pip requirements:
+
+pip3 install -r requirements.txt
+
+// To run tests and retrieve coverage:
+
+python3 -m pytest --cov=application --cov-report=term-missing
+
+// To generate JUnit and Cobertura coverage reports:
+
+python3 -m pytest --cov=application --junitxml=junit.xml --cov-report=xml --cov-report=term-missing
+
+// To run the application on the command line, simply run:
+
+python3 app.py
