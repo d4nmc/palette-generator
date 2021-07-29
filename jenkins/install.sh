@@ -3,7 +3,7 @@
 # Python, pip and venv:
 
 sudo apt-get update
-sudo apt-get install -y python3 python3-pip python3-venv
+sudo apt-get install -y python3 python3-pip python3-venv 
 
 # Create and activate the virtual environment:
 
@@ -13,4 +13,4 @@ source venv/bin/activate
 # Install pip requirements:
 
 pip3 install -r requirements.txt
-pip3 install python3 pytest pytest-cov flask_testing
+pip3 install pytest pytest-cov flask_testing
