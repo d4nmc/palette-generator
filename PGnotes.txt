@@ -1,3 +1,8 @@
+// Plan of attack
+1.  get it working on a local machine and play with colour palette through 5000 port
+2.  set up jenkinsfile 
+3.  set up web hook
+
 
 // Python, pip and venv must all be installed:
 
