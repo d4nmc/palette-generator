@@ -9,14 +9,12 @@ sudo apt-get install python3 python3-pip python3-venv -y
 
 # Create and source virtual environment
 python3 -m venv venv
-
 source venv/bin/activate
-
 
 # Install pip requirements
 pip3 install -r requirements.txt
 
-# Create palette generator list working directory and make working directory
+# Create todo list working directory and make working directory
 sudo chown -R $(whoami) /opt
 install_dir=/opt/palette-generator
 rm -rf $install_dir
