@@ -1,3 +1,3 @@
 #!/bin/bash
-source /opt/palette-generator/venv/bin/activate
-gunicorn  --bind=0.0.0.0:5000 --workers 4 app:app
+
+git clone https://github.com/d4nmc/palette-generator

@@ -6,6 +6,11 @@ pipeline {
          rebuild_db = 'true'
     }
     stages { 
+        stage('Clone Stage') { 
+            steps {
+                sh 'bash jenkins/run.sh'
+            }
+        }
         stage('Install Stage') { 
             steps {
                 sh 'bash jenkins/install.sh'
