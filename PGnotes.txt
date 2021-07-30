@@ -5,7 +5,7 @@ You are expected to create your job using a Pipeline script (a.k.a. a `Jenkinsfi
 
 1. Be triggered by a webhook.
 
-
+~ Webhook working- activates on PUSH to gitHub from terminal
 
 2. Clone down the contents of the repository.
 
@@ -13,19 +13,19 @@ You are expected to create your job using a Pipeline script (a.k.a. a `Jenkinsfi
 
 3. Run unit tests.
 
-
+~ Unit tests running succesfully through plugins
 
 4. Run the application.
 
-
+~ Job runs, deploy and test scripts edited
 
 5. Configure Jenkins to notify developers when a job has been completed. This could be via email, a Teams message, a Slack message, etc.
 
-
+~ Teams notification working
 
 6. Publish the unit test and coverage reports using plugins.
 
-
+~ Graphs and full performance break down available through jenkins, CAN THESE BE PUBLISHED TO A PERFORMANCE html page? different host maybe on a seperate machine?
 
 7. Create two jobs that are triggered separately for the `main` and `development` branches:
 
