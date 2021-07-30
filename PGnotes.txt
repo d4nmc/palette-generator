@@ -1,31 +1,46 @@
-// Plan of attack
-1.  get it working on a local machine and play with colour palette through 5000 port
-2.  set up jenkinsfile 
-3.  set up web hook
+Project Outline
+
+You are expected to create your job using a Pipeline script (a.k.a. a `Jenkinsfile`) which will allow your trainer to start up a job on their own Jenkins server with minimal configuration. The job should do the following:
 
 
-// Python, pip and venv must all be installed:
+1. Be triggered by a webhook.
 
-sudo apt-get update
-sudo apt-get install -y python3 python3-pip python3-venv
 
-// Create and activate the virtual environment:
 
-python3 -m venv venv
-source venv/bin/activate
+2. Clone down the contents of the repository.
 
-// Install pip requirements:
 
-pip3 install -r requirements.txt
 
-// To run tests and retrieve coverage:
+3. Run unit tests.
 
-python3 -m pytest --cov=application --cov-report=term-missing
 
-// To generate JUnit and Cobertura coverage reports:
 
-python3 -m pytest --cov=application --junitxml=junit.xml --cov-report=xml --cov-report=term-missing
+4. Run the application.
 
-// To run the application on the command line, simply run:
 
-python3 app.py
+
+5. Configure Jenkins to notify developers when a job has been completed. This could be via email, a Teams message, a Slack message, etc.
+
+
+
+6. Publish the unit test and coverage reports using plugins.
+
+
+
+7. Create two jobs that are triggered separately for the `main` and `development` branches:
+
+
+
+8. Pushes to `development` should trigger tests to be run and the application to start in a 'staging' environment.
+
+
+
+9. Pushes to `main` should trigger the application to start on a 'production' environment.
+
+
+
+10. One or both of these 'environments' should be running on a separate VM. Think about how you could get Jenkins to control another machine remotely.
+        
+
+
+11. Use the `HOSTNAME` environment variable to display on the webpage whether the application is running on the 'staging' or 'production' environment.
