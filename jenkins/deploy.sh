@@ -14,7 +14,7 @@ source venv/bin/activate
 # Install pip requirements
 pip3 install -r requirements.txt
 
-# Create todo list working directory and make working directory
+# Create palette generator list working directory and make working directory
 sudo chown -R $(whoami) /opt
 install_dir=/opt/palette-generator
 rm -rf $install_dir
