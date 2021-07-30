@@ -9,7 +9,7 @@ You are expected to create your job using a Pipeline script (a.k.a. a `Jenkinsfi
 
 2. Clone down the contents of the repository.
 
-
+AZURE CONNECT
 
 3. Run unit tests.
 
