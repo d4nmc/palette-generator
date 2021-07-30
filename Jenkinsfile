@@ -25,7 +25,7 @@ pipeline {
     post {
         always {
              cobertura coberturaReportFile: 'coverage.xml', failNoReports: true
-            junit 'junit.xml'
+            junit 'junit.xml'   
         }
     }
 }

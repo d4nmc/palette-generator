@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Script requires the user running it to have sudo privileges
-# Please edit the /etc/sudoers file accordingly using sudo visudo
-
 # Install apt Dependencies
 sudo apt-get update
 sudo apt-get install python3 python3-pip python3-venv -y
